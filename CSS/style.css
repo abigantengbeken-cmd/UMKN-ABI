@@ -1,0 +1,428 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #160505;
+  color: white;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+:root {
+  --merah: #ff3025;
+  --oranye: #ff781c;
+  --kuning: #ffce38;
+}
+
+.api-background {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse at 15% 90%,
+      #ff2c103f, transparent 40%),
+    radial-gradient(ellipse at 85% 85%,
+      #ff8b0035, transparent 40%),
+    linear-gradient(180deg, #160505, #250b08);
+}
+
+.api-background::before,
+.api-background::after {
+  content: "";
+  position: absolute;
+  bottom: -130px;
+  left: -20%;
+  width: 140%;
+  height: 300px;
+  background:
+    radial-gradient(ellipse at 20% 100%,
+      #ff2200, transparent 55%),
+    radial-gradient(ellipse at 50% 100%,
+      #ff8a00, transparent 50%),
+    radial-gradient(ellipse at 80% 100%,
+      #ed2500, transparent 55%);
+  filter: blur(25px);
+  animation: api 3s ease-in-out infinite alternate;
+}
+
+.api-background::after {
+  animation-delay: -1.5s;
+  opacity: 0.7;
+}
+
+@keyframes api {
+  from {
+    transform: translateY(0) scaleX(1);
+    opacity: 0.55;
+  }
+  to {
+    transform: translateY(-30px) scaleX(1.1);
+    opacity: 1;
+  }
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 18px 7%;
+  background: #100404ee;
+  border-bottom: 1px solid #ff572b66;
+}
+
+.brand {
+  color: var(--kuning);
+  font-size: 21px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: var(--kuning);
+}
+
+.hero {
+  min-height: 520px;
+  padding: 65px 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.hero-content {
+  flex: 1;
+}
+
+.label {
+  display: inline-block;
+  color: var(--kuning);
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.hero h1 {
+  font-size: clamp(38px, 6vw, 68px);
+  line-height: 1.1;
+  margin: 18px 0;
+}
+
+.hero h1 span,
+h2 span {
+  color: var(--kuning);
+}
+
+.hero-content > p {
+  color: #e4cfca;
+  margin-bottom: 25px;
+  max-width: 450px;
+}
+
+.btn,
+button {
+  display: inline-block;
+  border: none;
+  border-radius: 8px;
+  padding: 13px 20px;
+  color: white;
+  font-weight: bold;
+  background: linear-gradient(110deg, #ff3025, #ff851b);
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover,
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 25px #ff4b2866;
+}
+
+.gambar-utama {
+  flex: 1;
+  max-width: 420px;
+  text-align: center;
+}
+
+.gambar-utama img {
+  width: 100%;
+  max-height: 380px;
+  object-fit: cover;
+  border-radius: 20px;
+  border: 2px solid #ff792c;
+  box-shadow: 0 0 35px #ff4b2840;
+  animation: melayang 4s ease-in-out infinite;
+}
+
+.gambar-utama p {
+  color: var(--kuning);
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-top: 15px;
+}
+
+@keyframes melayang {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.section {
+  padding: 65px 7%;
+  text-align: center;
+  scroll-margin-top: 20px;
+}
+
+h2 {
+  font-size: clamp(27px, 4vw, 40px);
+  margin: 10px 0;
+}
+
+.deskripsi {
+  color: #ddc7c1;
+  margin: 10px 0 30px;
+}
+
+.produk-container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  margin-top: 30px;
+  text-align: left;
+}
+
+.kartu {
+  overflow: hidden;
+  border: 1px solid #ff6c3555;
+  border-radius: 15px;
+  background: linear-gradient(145deg, #301310, #180808);
+  transition: 0.3s;
+}
+
+.kartu:hover {
+  transform: translateY(-7px);
+  border-color: var(--oranye);
+}
+
+.kartu img {
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.isi {
+  padding: 20px;
+}
+
+.isi h3 {
+  color: var(--kuning);
+  margin-bottom: 10px;
+}
+
+.isi p {
+  color: #e0cfca;
+  min-height: 65px;
+  font-size: 14px;
+  margin-bottom: 18px;
+}
+
+.isi button {
+  width: 100%;
+}
+
+.tentang {
+  background: #200b09bb;
+}
+
+.tentang > p:not(.label) {
+  max-width: 700px;
+  margin: 18px auto 0;
+  color: #e0cfca;
+}
+
+.keunggulan {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.keunggulan div {
+  flex: 1 1 150px;
+  padding: 20px;
+  border: 1px solid #ff6c3555;
+  border-radius: 12px;
+  background: #1b0a09;
+  font-size: 28px;
+}
+
+.keunggulan h3 {
+  font-size: 14px;
+  color: var(--kuning);
+  margin-top: 8px;
+}
+
+.kontak {
+  background: #160606aa;
+}
+
+.kontak-container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  max-width: 900px;
+  margin: 35px auto 0;
+}
+
+.kontak-card {
+  padding: 28px 20px;
+  border: 1px solid #ff6c3566;
+  border-radius: 16px;
+  background: linear-gradient(145deg, #35110e, #180808);
+  box-shadow: 0 8px 25px #00000035;
+  transition: 0.3s;
+}
+
+.kontak-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--kuning);
+}
+
+.ikon {
+  font-size: 38px;
+  margin-bottom: 10px;
+}
+
+.kontak-card h3 {
+  color: var(--kuning);
+  margin-bottom: 12px;
+}
+
+.kontak-card p {
+  color: white;
+  margin-bottom: 8px;
+  overflow-wrap: anywhere;
+}
+
+.kontak-card small {
+  display: block;
+  color: #cbb6af;
+  line-height: 1.7;
+}
+
+.kontak-card button {
+  width: 100%;
+  margin-top: 18px;
+}
+
+.kontak-card .status {
+  color: var(--kuning);
+  font-weight: bold;
+  margin-top: 12px;
+}
+
+footer {
+  text-align: center;
+  padding: 30px 15px;
+  background: #0d0404;
+  border-top: 1px solid #ff572b66;
+}
+
+footer img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+footer h3 {
+  color: var(--kuning);
+}
+
+footer p {
+  color: #f0d4c8;
+  margin: 5px 0 10px;
+}
+
+footer small {
+  display: block;
+  color: #bca6a0;
+}
+
+@media (max-width: 760px) {
+  .navbar {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  nav {
+    justify-content: center;
+    gap: 13px;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 45px 6%;
+  }
+
+  .hero-content > p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .gambar-utama {
+    width: 100%;
+  }
+
+  .gambar-utama img {
+    max-height: 330px;
+  }
+
+  .produk-container {
+    grid-template-columns: 1fr;
+  }
+
+  .kontak-container {
+    grid-template-columns: 1fr;
+  }
+
+  .section {
+    padding: 45px 6%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    scroll-behavior: auto !important;
+  }
+}
