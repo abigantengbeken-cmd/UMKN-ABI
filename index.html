@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#160505">
+  <meta name="description" content="Basreng Abi Renyah, camilan pedas, gurih, dan renyah.">
+
+  <title>Basreng Abi Renyah 🔥</title>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="api-background"></div>
+
+  <header class="navbar">
+    <a href="#beranda" class="brand">🔥 ABI RENYAH</a>
+
+    <nav>
+      <a href="#beranda">Beranda</a>
+      <a href="#produk">Produk</a>
+      <a href="#tentang">Tentang</a>
+      <a href="#kontak">Kontak</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- BERANDA -->
+    <section class="hero" id="beranda">
+      <div class="hero-content">
+        <span class="label">🔥 CAMILAN FAVORIT</span>
+
+        <h1>
+          BASRENG<br>
+          <span>ABI RENYAH</span>
+        </h1>
+
+        <p>
+          Pedas, gurih, dan renyah di setiap gigitan!
+          Temani waktu santaimu dengan camilan favorit.
+        </p>
+
+        <a href="#produk" class="btn">LIHAT PRODUK ↓</a>
+      </div>
+
+      <div class="gambar-utama">
+        <img src="assets/foto1.JPG" alt="Basreng Abi Renyah">
+        <p>🌶️ PEDAS • GURIH • RENYAH</p>
+      </div>
+    </section>
+
+    <!-- PRODUK -->
+    <section class="section" id="produk">
+      <span class="label">PILIHAN RASA</span>
+      <h2>PRODUK <span>KAMI</span></h2>
+
+      <p class="deskripsi">
+        Temukan varian basreng favoritmu!
+      </p>
+
+      <div class="produk-container">
+
+        <!-- PRODUK PEDAS -->
+        <article class="kartu">
+          <img src="assets/foto2.JPG" alt="Basreng Pedas">
+
+          <div class="isi">
+            <h3>🌶️ Varian Pedas</h3>
+            <p>Gurih dengan sensasi pedas yang nikmat.</p>
+
+            <p class="harga">Rp10.000 <small>/ bungkus</small></p>
+
+            <button onclick="pesan('Varian Pedas')">
+              Pesan Sekarang
+            </button>
+          </div>
+        </article>
+
+        <!-- PRODUK SUPER PEDAS -->
+        <article class="kartu">
+          <img src="assets/foto3.JPG" alt="Basreng Super Pedas">
+
+          <div class="isi">
+            <h3>🔥 Super Pedas</h3>
+            <p>Untuk pencinta camilan dengan sensasi pedas ekstra.</p>
+
+            <p class="harga">Rp12.000 <small>/ bungkus</small></p>
+
+            <button onclick="pesan('Varian Super Pedas')">
+              Pesan Sekarang
+            </button>
+          </div>
+        </article>
+
+        <!-- PRODUK ORIGINAL -->
+        <article class="kartu">
+          <img src="assets/foto4.JPG" alt="Basreng Original">
+
+          <div class="isi">
+            <h3>🌿 Varian Original</h3>
+            <p>Gurih dan renyah untuk menemani waktu santai.</p>
+
+            <p class="harga">Rp10.000 <small>/ bungkus</small></p>
+
+            <button onclick="pesan('Varian Original')">
+              Pesan Sekarang
+            </button>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- TENTANG -->
+    <section class="tentang section" id="tentang">
+      <span class="label">KENALI KAMI</span>
+      <h2>TENTANG <span>ABI RENYAH</span></h2>
+
+      <p>
+        Basreng Abi Renyah adalah usaha camilan yang
+        menyediakan varian pedas, super pedas, dan original.
+        Kami hadir untuk menemani waktu santai dengan
+        camilan yang gurih dan renyah.
+      </p>
+
+      <div class="keunggulan">
+        <div>🔥<h3>Pilihan Rasa</h3></div>
+        <div>✨<h3>Camilan Renyah</h3></div>
+        <div>❤️<h3>Rasa Nikmat</h3></div>
+      </div>
+    </section>
+
+    <!-- KONTAK -->
+    <section class="section kontak" id="kontak">
+      <span class="label">HUBUNGI KAMI</span>
+      <h2>INFORMASI <span>KONTAK</span></h2>
+
+      <p class="deskripsi">
+        Ingin memesan? Hubungi Basreng Abi Renyah!
+      </p>
+
+      <div class="kontak-container">
+
+        <div class="kontak-card">
+          <div class="ikon">📍</div>
+          <h3>Alamat Usaha</h3>
+          <p>Simpang Mangga Atas</p>
+          <small>Jalan Letda Sujono dekat portal.</small>
+        </div>
+
+        <div class="kontak-card">
+          <div class="ikon">📱</div>
+          <h3>Nomor HP / WhatsApp</h3>
+          <p>085212353148</p>
+          <small>Hubungi kami untuk pemesanan.</small>
+
+          <button onclick="hubungiPenjual()">
+            💬 Chat WhatsApp
+          </button>
+        </div>
+
+        <div class="kontak-card">
+          <div class="ikon">🕒</div>
+          <h3>Jam Operasional</h3>
+          <p>Senin – Sabtu</p>
+          <small>08.00 – 17.00 WIB</small>
+          <p class="status">Melayani pesanan</p>
+        </div>
+
+        <div class="kontak-card">
+          <div class="ikon">🌶️</div>
+          <h3>Nama Usaha</h3>
+          <p>Basreng Abi Renyah</p>
+          <small>Pedas • Gurih • Renyah</small>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <img src="assets/foto1.JPG" alt="Basreng Abi Renyah">
+    <h3>🔥 BASRENG ABI RENYAH 🔥</h3>
+    <p>Pedas • Gurih • Renyah</p>
+    <small>© <span id="tahun"></span> Basreng Abi Renyah</small>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
